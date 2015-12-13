@@ -10,7 +10,7 @@ errorFile = open("C:/Users/vujke/Documents/GitHub/Scraper/Error.txt" ,"w")
 
 x = 100
 
-while(x < 500):
+while(x < 1000):
 
 	#select a 'URL patern'
 	url="http://basketball.realgm.com/player/Marko-Keselj/Summary/"+str(x)
@@ -18,43 +18,64 @@ while(x < 500):
 	#request URL
 	r = requests.get(url)
 
-	#read response content
-	result = r.content 
-
-	#make BeautifulSoup object
-	soup = BeautifulSoup(result, 'html.parser')
-
-	#find the table
-	table = soup.find("table", {"class" : "tablesaw compact"})
-
-	#find a row
-	tr = table.find_all("tr", {"class" : "per_game"})
-
-	table_row = tr[-1]
-
-	#find table columns
-	table_columns = table_row.find_all("td")
-
-	div = soup.find("div", {"class":"profile-wrap"})
-
-	s = div.find_all("p")
-
-	#number of years spent in the NBA
-	years = s[1].string.strip()[0]
-
-	i = x-100+1
-	f.write(str(i)+"\t")
+	if r.status_code != requests.codes.ok:
+		x=x+1
+		continue
 
 	try:
+	#read response content
+	    result = r.content 
+
+		#make BeautifulSoup object
+		soup = BeautifulSoup(result, 'html.parser')
+
+		#find the table
+		table = soup.find("table", {"class" : "tablesaw compact"})
+
+		if table == None:
+			x = x+1
+			continue
+
+		#find a row
+		tr = table.find_all("tr", {"class" : "per_game"})
+
+		#if tr == None:
+		#	x = x+1
+		#	continue
+
+		table_row = tr[-1]
+
+		#find table columns
+		table_columns = table_row.find_all("td")
+
+		#if table_columns == None:
+		#	x = x+1
+		#	continue
+
+		div = soup.find("div", {"class":"profile-wrap"})
+
+		s = div.find_all("p")
+
+		#number of years spent in the NBA
+		years = s[1].string.strip()[0]
+
+		if years == "0" or years.isalpha():
+			x = x+1
+			continue
+
+		i = x-100+1
+		f.write(str(i)+"\t")
+
+		
 		for y in range (2, 24):
 			value = table_columns[y].string.strip()
 			f.write(str(value)+"\t")	
 
 		f.write(str(years)+"\n")
-		#f.write(str(year)+"\n")
+		#f.write(str"Err"+(year)+"\n")
 	
 	except Exception as e:
-            errorFile.write(str(x)+"********"+str(e)+"**********"+str(table_columns)+"\n")
+            errorFile.write("Error on line: "+str(x)+"********"+str(e)+"**********"+"\n")
             pass
 	
 	x = x+1
@@ -62,7 +83,12 @@ while(x < 500):
 f.close()
 errorFile.close()
 
-print 'It took', time.time()-start, 'seconds.'
+time = time.time()-start
+
+if(time > 60):
+	print 'It took', time/60, 'minutes.'
+else: 
+	print 'It took', time, 'seconds.'
 
 
 #************* Data labels explained**************
