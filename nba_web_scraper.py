@@ -4,14 +4,14 @@ import requests, time
 start = time.time()
 
 
-f = open("C:/Users/vujke/Documents/GitHub/Scraper/NBA_Stats2.txt" ,"w")
+f = open("C:/Users/vujke/Documents/GitHub/Scraper/NBA_Stats.txt" ,"w")
 errorFile = open("C:/Users/vujke/Documents/GitHub/Scraper/Error.txt" ,"w")
 
 dict_pos = {'PG':'1','SG':'2','SF':'3','PF':'4','C':'5','G':'12','GF':'23','F':'34','FC':'45'}
 
 x = 100
 
-while(x < 200):
+while(x < 1100):
 
 	#select a 'URL patern'
 	url="http://basketball.realgm.com/player/Marko-Keselj/Summary/"+str(x)
@@ -46,7 +46,8 @@ while(x < 200):
 			#print name_pos
 			#print len(name_pos)
 			len_name_pos = len(name_l)
-			print x
+			if x%20 == 0:
+				print x
 
 			if name_pos[len_name_pos-3].isalpha() and name_pos[len_name_pos-4].isalpha() == False:
 				x = x+1
@@ -95,7 +96,7 @@ while(x < 200):
 
 		#find table columns
 		table_columns = table_row.find_all("td")
-		print len(table_columns)
+		#print len(table_columns)
 		#if table_columns == None:
 		#   x = x+1
 		#   continue
@@ -112,7 +113,7 @@ while(x < 200):
 			continue
 
 		i = x-100+1
-		f.write(str(i)+"\t")
+		#f.write(str(i)+"\t")
 
 		
 		for y in range (2, 23):
