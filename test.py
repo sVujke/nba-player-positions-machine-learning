@@ -84,7 +84,7 @@ while x<510:
 		f.write(name+"\n")
 		
 	except Exception as e:
-        	errorFile.write("Error on line: "+str(x)+"********"+str(e)+"**********"+"\n")
+        	errorFile.write("Error on x: "+str(x)+"********"+str(e)+"**********"+"\n")
         	pass
     
 
