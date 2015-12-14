@@ -45,6 +45,10 @@ while(x < 105):
 			#print len(name_pos)
 			len_name_pos = len(name_l)
 
+			if name_pos[len_name_pos-3].isalpha() and name_pos[len_name_pos-4].isalpha() == False:
+				x = x+1
+				continue
+
 			if(name_pos[len_name_pos-2].isalpha()):
 				position = name_pos[len_name_pos-2:]
 				name = name_pos[0:len_name_pos-3]
@@ -57,6 +61,11 @@ while(x < 105):
 			end = len(name_l)-index
 			name_pos = name_l[0:-(end+2)]
 			len_name_pos = len(name_pos)
+
+			if name_pos[len_name_pos-3].isalpha() and name_pos[len_name_pos-4].isalpha() == False:
+				x = x+1
+				continue
+
 			if(name_pos[len_name_pos-2].isalpha()):
 				position = name_pos[len_name_pos-2:]
 				name = name_pos[0:len_name_pos-3]

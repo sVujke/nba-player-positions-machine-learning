@@ -3,10 +3,13 @@ from bs4 import BeautifulSoup
 import requests, time
 
 start = time.time()
-f = open("C:/Users/vujke/Documents/GitHub/Scraper/test.txt" ,"w")
+f = open("C:/Users/vujke/Documents/GitHub/Scraper/test.txt" ,"a")
 errorFile = open("C:/Users/vujke/Documents/GitHub/Scraper/TestError.txt" ,"w")
-x=100
-while x<500:
+
+dict_pos = {'PG':'1','SG':'2','SF':'3','PF':'4','C':'5','G':'12','GF':'23','F':'34','FC':'45'}
+
+x=500
+while x<510:
 	#select a 'URL patern'
 	url="http://basketball.realgm.com/player/Marko-Keselj/Summary/"+str(x)
 
@@ -48,6 +51,11 @@ while x<500:
 			#print len(name_pos)
 			len_name_pos = len(name_l)
 			print x
+
+			if name_pos[len_name_pos-3].isalpha() and name_pos[len_name_pos-4].isalpha() == False:
+				x = x+1
+				continue
+
 			if(name_pos[len_name_pos-2].isalpha()):
 				position = name_pos[len_name_pos-2:]
 				name = name_pos[0:len_name_pos-3]
@@ -60,6 +68,11 @@ while x<500:
 			end = len(name_l)-index
 			name_pos = name_l[0:-(end+2)]
 			len_name_pos = len(name_pos)
+
+			if name_pos[len_name_pos-3].isalpha() and name_pos[len_name_pos-4].isalpha() == False:
+				x = x+1
+				continue
+
 			if(name_pos[len_name_pos-2].isalpha()):
 				position = name_pos[len_name_pos-2:]
 				name = name_pos[0:len_name_pos-3]
@@ -67,7 +80,7 @@ while x<500:
 				position = name_pos[len_name_pos-1:]
 				name = name_pos[0:len_name_pos-2]
 
-		f.write(position+"\t")
+		f.write(dict_pos[position]+"\t")
 		f.write(name+"\n")
 		
 	except Exception as e:
