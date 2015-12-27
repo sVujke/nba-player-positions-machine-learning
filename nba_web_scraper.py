@@ -4,14 +4,14 @@ import requests, time
 start = time.time()
 
 
-f = open("C:/Users/vujke/Documents/GitHub/Scraper/NBA_Stats.txt" ,"w")
-errorFile = open("C:/Users/vujke/Documents/GitHub/Scraper/Error.txt" ,"w")
+f = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/NBA_Stats.txt" ,"w")
+errorFile = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/Error.txt" ,"w")
 
 dict_pos = {'PG':'1','SG':'2','SF':'3','PF':'4','C':'5','G':'12','GF':'23','F':'34','FC':'45'}
 
-x = 100
+x = 1
 
-while(x < 1100):
+while(x < 2500):
 
 	#select a 'URL patern'
 	url="http://basketball.realgm.com/player/Marko-Keselj/Summary/"+str(x)
@@ -77,6 +77,33 @@ while(x < 1100):
 				position = name_pos[len_name_pos-1:]
 				name = name_pos[0:len_name_pos-2]
 
+		#find paragraphs
+		p = soup.find_all('p')
+	
+		
+		# find paragraph with height and width 
+		uncleaned_size = ""
+		
+		for u in range(7):
+			uncleaned_size = p[u].text.strip()
+			if(uncleaned_size[0] == "H"):
+				uncleaned_size = p[u].text.strip()
+				break
+							
+		
+		pos = uncleaned_size.index("W")
+		
+		weight_uncleaned =  uncleaned_size[pos:]
+		height_uncleaned = uncleaned_size[:pos-5]
+
+		bracket1 = weight_uncleaned.index("(")
+
+		bracket2 = height_uncleaned.index("(")
+
+		# width and height 
+		weight = weight_uncleaned[bracket1:].lstrip("(").rstrip(")").strip("kg")
+		height = height_uncleaned[bracket2:].lstrip("(").rstrip(")").strip("cm")
+
 
 		#find the table
 		table = soup.find("table", {"class" : "tablesaw compact"})
@@ -125,6 +152,9 @@ while(x < 1100):
 		f.write(str(years)+"\t")
 
 		f.write(dict_pos[position]+"\t")
+
+		f.write(weight+"\t")
+		f.write(height+"\t")
 
 		f.write(name+"\n")
 		#f.write(str"Err"+(year)+"\n")

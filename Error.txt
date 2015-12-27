@@ -1,3 +1,4 @@
+Error on x: 13********string index out of range**********
 Error on x: 330********string index out of range**********
 Error on x: 353********string index out of range**********
 Error on x: 396********string index out of range**********
@@ -31,3 +32,95 @@ Error on x: 1031********string index out of range**********
 Error on x: 1052********string index out of range**********
 Error on x: 1054********string index out of range**********
 Error on x: 1069********string index out of range**********
+Error on x: 1103********string index out of range**********
+Error on x: 1104********string index out of range**********
+Error on x: 1107********string index out of range**********
+Error on x: 1116********string index out of range**********
+Error on x: 1121********string index out of range**********
+Error on x: 1138********string index out of range**********
+Error on x: 1149********string index out of range**********
+Error on x: 1155********string index out of range**********
+Error on x: 1174********string index out of range**********
+Error on x: 1227********string index out of range**********
+Error on x: 1279********list index out of range**********
+Error on x: 1284********string index out of range**********
+Error on x: 1299********string index out of range**********
+Error on x: 1304********list index out of range**********
+Error on x: 1321********string index out of range**********
+Error on x: 1322********string index out of range**********
+Error on x: 1323********string index out of range**********
+Error on x: 1324********string index out of range**********
+Error on x: 1431********string index out of range**********
+Error on x: 1453********substring not found**********
+Error on x: 1456********substring not found**********
+Error on x: 1640********string index out of range**********
+Error on x: 1688********string index out of range**********
+Error on x: 1776********string index out of range**********
+Error on x: 1779********string index out of range**********
+Error on x: 1789********string index out of range**********
+Error on x: 1791********string index out of range**********
+Error on x: 1803********string index out of range**********
+Error on x: 1884********string index out of range**********
+Error on x: 1990********string index out of range**********
+Error on x: 2049********string index out of range**********
+Error on x: 2055********string index out of range**********
+Error on x: 2056********string index out of range**********
+Error on x: 2058********string index out of range**********
+Error on x: 2066********string index out of range**********
+Error on x: 2100********string index out of range**********
+Error on x: 2109********string index out of range**********
+Error on x: 2113********substring not found**********
+Error on x: 2115********substring not found**********
+Error on x: 2116********substring not found**********
+Error on x: 2119********substring not found**********
+Error on x: 2129********string index out of range**********
+Error on x: 2133********substring not found**********
+Error on x: 2141********string index out of range**********
+Error on x: 2230********substring not found**********
+Error on x: 2235********substring not found**********
+Error on x: 2238********substring not found**********
+Error on x: 2240********substring not found**********
+Error on x: 2241********substring not found**********
+Error on x: 2242********substring not found**********
+Error on x: 2243********substring not found**********
+Error on x: 2244********substring not found**********
+Error on x: 2245********substring not found**********
+Error on x: 2246********substring not found**********
+Error on x: 2247********substring not found**********
+Error on x: 2249********substring not found**********
+Error on x: 2250********substring not found**********
+Error on x: 2252********substring not found**********
+Error on x: 2254********substring not found**********
+Error on x: 2261********substring not found**********
+Error on x: 2280********string index out of range**********
+Error on x: 2286********substring not found**********
+Error on x: 2287********substring not found**********
+Error on x: 2289********substring not found**********
+Error on x: 2293********substring not found**********
+Error on x: 2294********substring not found**********
+Error on x: 2319********string index out of range**********
+Error on x: 2332********substring not found**********
+Error on x: 2333********substring not found**********
+Error on x: 2337********substring not found**********
+Error on x: 2342********substring not found**********
+Error on x: 2343********substring not found**********
+Error on x: 2367********substring not found**********
+Error on x: 2403********list index out of range**********
+Error on x: 2449********substring not found**********
+Error on x: 2450********substring not found**********
+Error on x: 2459********list index out of range**********
+Error on x: 2469********substring not found**********
+Error on x: 2472********substring not found**********
+Error on x: 2473********list index out of range**********
+Error on x: 2474********substring not found**********
+Error on x: 2483********list index out of range**********
+Error on x: 2484********substring not found**********
+Error on x: 2485********list index out of range**********
+Error on x: 2487********list index out of range**********
+Error on x: 2488********list index out of range**********
+Error on x: 2491********list index out of range**********
+Error on x: 2493********substring not found**********
+Error on x: 2495********substring not found**********
+Error on x: 2496********list index out of range**********
+Error on x: 2498********list index out of range**********
+Error on x: 2499********list index out of range**********
