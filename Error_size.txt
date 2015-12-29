@@ -1,2 +1,0 @@
-Error on x: 133********list index out of range**********
-Error on x: 144********list index out of range**********
