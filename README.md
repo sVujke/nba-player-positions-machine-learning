@@ -155,7 +155,42 @@ According to Univariate Feature Selection thes features were the most important:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | --- | --- | ---
-Domain Knowledge | --- | --- | ---
-Univariate | --- | --- | ---
-Variance Threshold | --- | --- | ---
+None | 0.49 | 0.43 | 0.48
+Domain Knowledge | 0.598 | 0.58 | 0.57
+Univariate | 0.53 | 0.53 | 0.55
+Variance Threshold | 0.51 | 0.47 |0.50
+
+#Conclusion 
+
+For all three classifications SVM performed best when the kernel was linear.
+
+### 5 positions
+
+The most accurate predicrtion of player position based on individual statistics can be made when there are 5 positions to be
+classified which is probably why this is the most common way to name positions. 
+
+Both Naive Bayes and SVM give nice results in this case. These algorithms do not tolerate redundant features, therefor removing such features increases their accuracy. On the orher hand, Logistic Regression does tolerate redundant features, they actually increase the algorithm's accuracy, but not for mor than 2 - 2.5% in this case.
+
+The best results came after using Univariate Feature selection. 
+
+### 3 positions
+
+In the case of classifying three positions feature selection based on domain knowledge performed a little bit better than the 
+Univariate feature selection. 
+
+The best algorithm for the job in this case is SVM.
+
+The results are not as good as when classifying 5 positions because many centers were classified as forwards and vice versa
+and a fewer number of forwards were classified as guards and vice versa. This can be seen from the confusion matrices.  
+
+### 9 positions 
+
+In this case I got the worst results. This can be explained by the fact that many players from the dataset who can play two positions
+spend most of the time playing one position so I get a lot of players who play 45 classified as 5, or 34 classified as 3 etc.
+
+For example, when using Naive Bayes I get a confusion matrix where 22 players who play 12 (able to play both 1 and 2) are classified
+as 2: 
+
+![alt text](http://snag.gy/lDQ0x.jpg)
+
+This is why I developed my own metric "custom_accuracy" which can be found in the [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
