@@ -52,12 +52,58 @@ The collected data is made out of 26 different features. This is a DataFrame rep
 
 ![alt text](http://snag.gy/atRSE.jpg)
 
+Feature names:
+
 Short | Long | Short | Long
 --- | --- | --- | ---
 GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
-GP| Games Played | GS | Games Started
+MIN| Minutes Played | FGM | Field Goals Made
+FGA| Field Goals Atempted | FG% | Field Goal Percent 
+3PM| 3 Points Made | 3PA | 3 Points Atempted
+3P%| 3 Points Percent | FTM | Free Throws Made 
+FTA| Free Throws Atempted | FT% | Free Throws Percent
+OFF| Offensive Rebounds | DEF | Defensive Rebounds
+TRB| Total Rebounds | AST | Assists
+STL| Steals | BLK | Blocks
+PF| Personal Fouls | TOV | Turnovers
+PTS| Points | YR | Years playing
+POS| Positions | W | Weight
+H| Height | NAME | Name
+
+> Features refference http://basketball.realgm.com/info/glossary
+
+The data is split into three sub folders:
+*[data3](https://github.com/sVujke/nba-player-positions/tree/master/data3) - For 3 positions classification
+*[data5](https://github.com/sVujke/nba-player-positions/tree/master/data5) - For 5 positions classification
+*[data](https://github.com/sVujke/nba-player-positions/tree/master/data) - For 9 positions classification
+
+In these folders following files can be found:
+* cleaned
+* train_data - For training the Classifier
+* test_data - For testing the accuracy of the Classifier
+* valid_data - For final testing in order to avoid overfit
+
+#Feature Selection 
+
+Feature Selection was done in the same way for all three classifications, thre methods were used:
+* Domain knowledge
+* Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label
+* Variance Threshold - Removes all features that don't meet a specified threshold
+
+# Classifying 3 positions 
+
+This is the first option of description mentioned above, with three positions Guard (1), Forward (2), Center (3):
+
+##Fearute selection 
+
+Using domain knowledge I decided to remove the following features:  GP,GS,MIN,FG%,
+      3P%,FT%,PTS,YR,POS,3PM,FTM,FGM
+Using variance threshold 4 features vere removed
+
+According to Univariate Feature Selection thes features were the most important:
+
+![alt text](http://snag.gy/b9OI4.jpg)
+
+##Classification results:
+
+
