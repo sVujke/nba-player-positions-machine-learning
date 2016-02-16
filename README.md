@@ -114,6 +114,8 @@ None | 0.68 | 0.53 | 0.858
 Domain Knowledge | 0.79 | 0.893 | 0.877
 Univariate | 0.73 | 0.893 | 0.85
 
+Confusion Matrices in the soure file.
+
 # Classifying 5 positions 
 The code can be found in [Classification_5_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_5_positions.ipynb)
 
@@ -138,6 +140,7 @@ None | 0.56 | 0.71 | 0.74
 Domain Knowledge | 0.66 | 0.75 | 0.79
 Univariate | 1.0 | 1.0 | 0.87
 
+Confusion Matrices in the soure file.
 
 # Classifying 9 positions 
 The code can be found in [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
@@ -163,6 +166,8 @@ None | 0.49 | 0.43 | 0.48
 Domain Knowledge | 0.598 | 0.58 | 0.57
 Univariate | 0.53 | 0.53 | 0.55
 Variance Threshold | 0.51 | 0.47 |0.50
+
+Confusion Matrices in the soure file.
 
 #Conclusion 
 
