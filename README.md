@@ -131,10 +131,10 @@ According to Univariate Feature Selection thes features were the most important:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | --- | --- | ---
-Domain Knowledge | --- | --- | ---
-Univariate | --- | --- | ---
-Variance Threshold | --- | --- | ---
+None | 0.56 | 0.71 | 0.74
+Domain Knowledge | 0.66 | 0.75 | 0.79
+Univariate | 1.0 | 1.0 | 0.87
+
 
 # Classifying 9 positions 
 
