@@ -20,13 +20,13 @@ Today it is most common to use 5 positions described as:
 
 There is also an option with players who can play two positions:
 * Point Guard (1)
-* Combo Guard (2)
+* Combo Guard (12)
 * Shooting Guard (2)
 * Guard Forward (23)
 * Small Forward (3)
 * Point Forward (34)
 * Power Forward (4)
-= Forward Center(45)
+* Forward Center(45)
 * Center (5)
 
 ![alt text](http://snag.gy/GUMzV.jpg)
@@ -106,4 +106,57 @@ According to Univariate Feature Selection thes features were the most important:
 
 ##Classification results:
 
+Feature Selection | Naive Bayes | SVM | Logistic Regression
+--- | --- | --- | ---
+None | --- | --- | ---
+Domain Knowledge | --- | --- | ---
+Univariate | --- | --- | ---
+Variance Threshold | --- | --- | ---
 
+# Classifying 5 positions 
+
+This is the first option of description mentioned above, with three positions Point Guard (1), 
+Shooting Guard (2), Small Forward (3), Power Forward (4), Center (5)
+
+##Fearute selection 
+
+Using domain knowledge I decided to remove the following features:  GP,GS,MIN,FG%,
+      3P%,FT%,PTS,YR,POS,3PM,FTM,FGM
+Using variance threshold 4 features vere removed
+
+According to Univariate Feature Selection thes features were the most important:
+
+![alt text](http://snag.gy/Ileu6.jpg)
+
+##Classification results:
+
+Feature Selection | Naive Bayes | SVM | Logistic Regression
+--- | --- | --- | ---
+None | --- | --- | ---
+Domain Knowledge | --- | --- | ---
+Univariate | --- | --- | ---
+Variance Threshold | --- | --- | ---
+
+# Classifying 9 positions 
+
+This is the first option of description mentioned above, with three positions Point Guard (1), 
+Shooting Guard (2), Small Forward (3), Power Forward (4), Center (5), Combo Guard (12), Guard Forward (23), Point Forward (34), Forward Center(45)
+
+##Fearute selection 
+
+Using domain knowledge I decided to remove the following features:  GP,GS,MIN,FG%,
+      3P%,FT%,PTS,YR,POS,3PM,FTM,FGM
+Using variance threshold 4 features vere removed
+
+According to Univariate Feature Selection thes features were the most important:
+
+![alt text](http://snag.gy/u9t2m.jpg)
+
+##Classification results:
+
+Feature Selection | Naive Bayes | SVM | Logistic Regression
+--- | --- | --- | ---
+None | --- | --- | ---
+Domain Knowledge | --- | --- | ---
+Univariate | --- | --- | ---
+Variance Threshold | --- | --- | ---
