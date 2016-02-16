@@ -92,6 +92,8 @@ Feature Selection was done in the same way for all three classifications, thre m
 
 # Classifying 3 positions 
 
+The code can be found in [Classification_3_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_3_positions.ipynb)
+
 This is the first option of description mentioned above, with three positions Guard (1), Forward (2), Center (3):
 
 ##Fearute selection 
@@ -113,6 +115,7 @@ Domain Knowledge | 0.79 | 0.893 | 0.877
 Univariate | 0.73 | 0.893 | 0.85
 
 # Classifying 5 positions 
+The code can be found in [Classification_5_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_5_positions.ipynb)
 
 This is the first option of description mentioned above, with three positions Point Guard (1), 
 Shooting Guard (2), Small Forward (3), Power Forward (4), Center (5)
@@ -137,6 +140,7 @@ Univariate | 1.0 | 1.0 | 0.87
 
 
 # Classifying 9 positions 
+The code can be found in [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
 
 This is the first option of description mentioned above, with three positions Point Guard (1), 
 Shooting Guard (2), Small Forward (3), Power Forward (4), Center (5), Combo Guard (12), Guard Forward (23), Point Forward (34), Forward Center(45)
