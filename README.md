@@ -185,8 +185,12 @@ and a fewer number of forwards were classified as guards and vice versa. This ca
 
 ### 9 positions 
 
+In this case Naive Bayes performed the best. Domain knoweledge was slightly better than Univariate feature selection.
+
 In this case I got the worst results. This can be explained by the fact that many players from the dataset who can play two positions
 spend most of the time playing one position so I get a lot of players who play 45 classified as 5, or 34 classified as 3 etc.
+
+For instance, Peja Stojakovic can be found in the dataset with a position 34 (scraped from the website) even though he plays position 3. 
 
 For example, when using Naive Bayes I get a confusion matrix where 22 players who play 12 (able to play both 1 and 2) are classified
 as 2: 
@@ -194,3 +198,8 @@ as 2:
 ![alt text](http://snag.gy/lDQ0x.jpg)
 
 This is why I developed my own metric "custom_accuracy" which can be found in the [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
+
+#What to improve in the future work?
+Working on this project I realised that the knowledge of regular expressions can be very usefull for scraping and 
+filtering data, so this is something to work on.
+Data Visualisation is also something that will improve the way I approach machine learning problems.
