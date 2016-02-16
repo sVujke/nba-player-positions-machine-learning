@@ -47,4 +47,17 @@ This is performed by the [nba_web_scraper.py](https://github.com/sVujke/nba-play
 
 #Data Exploration 
 The collected data is made out of 26 different features. This is a DataFrame representation:
-![alt text](http://snag.gy/GUMzV.jpg)
+
+![alt text](http://snag.gy/k5iSf.jpg)
+
+![alt text](http://snag.gy/atRSE.jpg)
+
+Short | Long | Short | Long
+--- | --- | --- | ---
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
+GP| Games Played | GS | Games Started
