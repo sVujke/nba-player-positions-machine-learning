@@ -97,12 +97,12 @@ The folowing feature selection methods were utilized for each data set:
 
 This project was implemented using [Python 2.7](https://www.python.org/) and the following third party libraries:
 
-*[BeautifulSoup]
-*[Sckit-Learn]
-*[Pandas]
-*[Numpy]
-*[SciPy]
-*[iPtyhon Notebook]
+* [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) is a Python library for pulling data out of HTML and XML files. It works with your multiple parsers to provide idiomatic ways of navigating, searching, and modifying the parse tree. In this case it was used for scraping player statistics.  
+* [Sckit-Learn](http://scikit-learn.org/stable/) is an open source Python library for machine learning built on top of NumPy and Scipy featuring many classification, regression and clustering algorithms. 
+* [Pandas](http://pandas.pydata.org/) is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for Python. DataFrames were the most useful datastructure for this particular project because they enabeled easy data manipulation and spreadsheet-like visualisation
+* [NumPy](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) is an open source extension for Python, which adds support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays. NumPy enables any algorithm that can be expressed primarily as operations on arrays and matrices to run almost as quickly as the equivalent C code.
+
+The project was developed using [iPtyhon Notebook](http://ipython.org/), an interactive command shell which added flexibility to the workflow and a much better user experience for this purpose than a standard shell, IDE or editor.
 
 # Classification Results
 
