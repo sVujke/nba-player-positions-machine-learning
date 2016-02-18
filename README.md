@@ -89,6 +89,8 @@ Feature Selection was performed in the same way for all three classifications, b
 * Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label.
 * Variance Threshold - Removes all features that don't meet a specified threshold.
 
+# Classification Results
+
 ## Classifying 3 positions - Data Set 1 
 
 The code can be found in [Classification_3_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_3_positions.ipynb)
@@ -99,11 +101,11 @@ Using the domain knowledge, it has been decided to remove the following features
 
 According to the Univariate Feature Selection these features were the most important:
 
-Using variance threshold 4 features vere removed.
+Using variance threshold 4 features were removed.
 
 ![alt text](http://snag.gy/b9OI4.jpg)
 
-##Classification results:
+###Classification results (accuracy scores):
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
@@ -120,13 +122,13 @@ The code can be found in [Classification_5_positions.ipynb](https://github.com/s
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
-Using variance threshold 4 features vere removed.
+Using variance threshold 4 features were removed.
 
 According to the Univariate Feature Selection these features were the most important:
 
 ![alt text](http://snag.gy/Ileu6.jpg)
 
-###Classification results:
+###Classification results (accuracy scores):
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
@@ -143,13 +145,13 @@ The code can be found in [Classification_9_positions.ipynb](https://github.com/s
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
-Using variance threshold 4 features vere removed.
+Using variance threshold 4 features were removed.
 
 According to the Univariate Feature Selection these features were the most important:
 
 ![alt text](http://snag.gy/u9t2m.jpg)
 
-###Classification results:
+###Classification results (accuracy scores):
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
@@ -162,14 +164,6 @@ Confusion Matrices in the soure file.
 
 #Conclusion 
 
-### 5 positions
-
-The most accurate prediction of player position based on individual statistics can be made when classification is performed in 5 positions (5 classes) which is probably why this is the most common way to name positions. 
-
-Both Naive Bayes and SVM gave good results These algorithms do not tolerate redundant features, therefore removing such features increases their accuracy. On the orher hand, Logistic Regression does tolerate redundant features, they actually increase the algorithm's accuracy, but not for more than 2 - 2.5% in this case.
-
-The best results were achieved when using Univariate Feature selection. 
-
 ### 3 positions
 
 In the case of classifying players in three positions, feature selection based on domain knowledge performed a little better than the Univariate feature selection. 
@@ -177,6 +171,14 @@ In the case of classifying players in three positions, feature selection based o
 The best algorithm for the job in this case is SVM.
 
 The results are not as good as when classifying in 5 positions because many center players were classified as forwards and vice versa. Also a fewer number of forward players were classified as guards and vice versa. This can be seen from the confusion matrices.  
+
+### 5 positions
+
+The most accurate prediction of player position based on individual statistics can be made when classification is performed in 5 positions (5 classes) which is probably why this is the most common way to name positions. 
+
+Both Naive Bayes and SVM gave good results These algorithms do not tolerate redundant features, therefore removing such features increases their accuracy. On the orher hand, Logistic Regression does tolerate redundant features, they actually increase the algorithm's accuracy, but not for more than 2 - 2.5% in this case.
+
+The best results were achieved when using Univariate Feature selection. 
 
 ### 9 positions 
 
@@ -190,7 +192,3 @@ For instance, Pedja Stojakovic can be found in the dataset with a position 34 (s
 
 This is why, for the purpose of this project, a custom metric was developed, titled "custom_accuracy". The metric can be found at [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
 
-#Future work
-Working on this project I realised that the knowledge of regular expressions can be very usefull for scraping and 
-filtering data, so this is something to work on.
-Data Visualisation is also something that will improve the way I approach machine learning problems.
