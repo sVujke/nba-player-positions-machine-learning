@@ -27,6 +27,8 @@ There is also an alternative approach with players who can play at different two
 * Forward Center(45)
 * Center (5)
 
+This is a visual representation of the position naming methods:  
+
 ![alt text](http://snag.gy/GUMzV.jpg)
 
 In this project, a machine learning approach is used to predict player position based on his individual statistics, such as: three 
@@ -34,7 +36,7 @@ points made, blocks, games played, height etc.
 
 In order to find the best one out of the mentioned ways for describing positions, results of three classification algorithms will be compared: 
 * Naive Bayes
-* Suport Vectore Machine (SVM)
+* Suport Vectore Machine (SVM) - performs best with [linear kernel](http://scikit-learn.org/stable/modules/svm.html) in this case 
 * Logistic Regresssion
 
 #Data Collection 
@@ -75,29 +77,29 @@ The data is split into three sub folders:
 * [data](https://github.com/sVujke/nba-player-positions/tree/master/data) - For 9 positions classification
 
 In these folders following files can be found:
-* cleaned
-* train_data - For training the Classifier
-* test_data - For testing the accuracy of the Classifier
-* valid_data - For final testing in order to avoid overfit
+* cleaned 
+* train_data - For training the Classifier - contains 60% of the data
+* test_data - For tuning the classifiers and testing their performance - contains 20% of the data
+* valid_data - For final testing in order to avoid overfit - contains 20% of the data
 
 #Feature Selection 
 
 Feature Selection was performed in the same way for all three classifications, by using following methods:
-* Domain knowledge
-* Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label
-* Variance Threshold - Removes all features that don't meet a specified threshold
+* Domain knowledge - Features are removed using experience and common sense and knowledge about the game. 
+* Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label.
+* Variance Threshold - Removes all features that don't meet a specified threshold.
 
-# Classifying 3 positions 
+## Classifying 3 positions - Data Set 1 
 
 The code can be found in [Classification_3_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_3_positions.ipynb)
 
-##Feature selection 
+###Feature selection 
 
 Using the domain knowledge, it has been decided to remove the following features:  GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
-Using variance threshold 4 features vere removed.
-
 According to the Univariate Feature Selection these features were the most important:
+
+Using variance threshold 4 features vere removed.
 
 ![alt text](http://snag.gy/b9OI4.jpg)
 
@@ -109,12 +111,12 @@ None | 0.68 | 0.53 | 0.858
 Domain Knowledge | 0.79 | 0.893 | 0.877
 Univariate | 0.73 | 0.893 | 0.85
 
-Confusion Matrices in the soure file.
+Confusion Matrices in the source file.
 
-# Classifying 5 positions 
+## Classifying 5 positions - Data Set 2 
 The code can be found in [Classification_5_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_5_positions.ipynb)
 
-##Feature selection 
+###Feature selection 
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
@@ -124,7 +126,7 @@ According to the Univariate Feature Selection these features were the most impor
 
 ![alt text](http://snag.gy/Ileu6.jpg)
 
-##Classification results:
+###Classification results:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
@@ -134,10 +136,10 @@ Univariate | 1.0 | 1.0 | 0.87
 
 Confusion Matrices in the soure file.
 
-# Classifying 9 positions 
+## Classifying 9 positions - Data Set 3 
 The code can be found in [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
 
-##Feature selection 
+###Feature selection 
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
@@ -147,7 +149,7 @@ According to the Univariate Feature Selection these features were the most impor
 
 ![alt text](http://snag.gy/u9t2m.jpg)
 
-##Classification results:
+###Classification results:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
@@ -159,8 +161,6 @@ Variance Threshold | 0.51 | 0.47 |0.50
 Confusion Matrices in the soure file.
 
 #Conclusion 
-
-For all three classifications SVM performed the best when the kernel was linear.
 
 ### 5 positions
 
