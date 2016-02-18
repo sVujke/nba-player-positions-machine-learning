@@ -4,19 +4,19 @@ This is a Machine Learning project developed as a part of the course in [Intelig
 # Problem description
 There are several ways to name player positions in basketball, but which one is the best?
 
-The traditional way of describing positions is:
+The traditional way of describing positions is (three positions classification - data set 1):
 * Guard (1)
 * Forward (2)
 * Center (3)
 
-Today the most common approach is to use five positions:
+Today the most common approach is to use five positions (five positions classification - data set 2):
 * Point Guard (1)
 * Shooting Guard (2)
 * Small Forward (3)
 * Power Forward (4)
 * Center (5)
 
-There is also an alternative approach with players who can play at different two positions:
+There is also an alternative approach with players who can play at different two positions (nine positions classification - data set 3):
 * Point Guard (1)
 * Combo Guard (12)
 * Shooting Guard (2)
@@ -72,9 +72,9 @@ H| Height | NAME | Name
 > Features refference http://basketball.realgm.com/info/glossary
 
 The data is split into three sub folders:
-* [data3](https://github.com/sVujke/nba-player-positions/tree/master/data3) - For 3 positions classification
-* [data5](https://github.com/sVujke/nba-player-positions/tree/master/data5) - For 5 positions classification
-* [data](https://github.com/sVujke/nba-player-positions/tree/master/data) - For 9 positions classification
+* [Data Set 1](https://github.com/sVujke/nba-player-positions/tree/master/data3) - For 3 positions classification
+* [Data Set 2](https://github.com/sVujke/nba-player-positions/tree/master/data5) - For 5 positions classification
+* [Data Set 3](https://github.com/sVujke/nba-player-positions/tree/master/data) - For 9 positions classification
 
 In these folders following files can be found:
 * cleaned 
@@ -82,9 +82,13 @@ In these folders following files can be found:
 * test_data - For tuning the classifiers and testing their performance - contains 20% of the data
 * valid_data - For final testing in order to avoid overfit - contains 20% of the data
 
+>Feature "NAME" was removed from these data sets because it is not relevant for this classification problem.
+
 #Feature Selection 
 
-Feature Selection was performed in the same way for all three classifications, by using following methods:
+The folowing feature selection methods were utilized for each data set:
+
+* None - No feature selection was done (all features were used).
 * Domain knowledge - Features are removed using experience and common sense and knowledge about the game. 
 * Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label.
 * Variance Threshold - Removes all features that don't meet a specified threshold.
@@ -101,9 +105,9 @@ Using the domain knowledge, it has been decided to remove the following features
 
 According to the Univariate Feature Selection these features were the most important:
 
-Using variance threshold 4 features were removed.
-
 ![alt text](http://snag.gy/b9OI4.jpg)
+
+Using variance threshold 4 features were removed.
 
 ###Classification results (accuracy scores):
 
@@ -124,9 +128,9 @@ Using the domain knowledge, it has been decided to remove the following features
 
 Using variance threshold 4 features were removed.
 
-According to the Univariate Feature Selection these features were the most important:
-
 ![alt text](http://snag.gy/Ileu6.jpg)
+
+According to the Univariate Feature Selection these features were the most important:
 
 ###Classification results (accuracy scores):
 
@@ -147,9 +151,9 @@ Using the domain knowledge, it has been decided to remove the following features
 
 Using variance threshold 4 features were removed.
 
-According to the Univariate Feature Selection these features were the most important:
-
 ![alt text](http://snag.gy/u9t2m.jpg)
+
+According to the Univariate Feature Selection these features were the most important:
 
 ###Classification results (accuracy scores):
 
