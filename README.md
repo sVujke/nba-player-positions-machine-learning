@@ -89,7 +89,7 @@ In these folders following files can be found:
 The folowing feature selection methods were utilized for each data set:
 
 * None - No feature selection was done (all features were used).
-* Domain knowledge - Features are removed using experience and common sense and knowledge about the game. 
+* Domain knowledge - Features are removed using experience, common sense and knowledge about the game. 
 * Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label.
 * Variance Threshold - Removes all features that don't meet a specified threshold.
 
@@ -205,5 +205,5 @@ For instance, Pedja Stojakovic can be found in the dataset with a position 34 (s
 
 ![alt text](http://snag.gy/lDQ0x.jpg)
 
-This is why, for the purpose of this project, a custom metric was developed, titled "custom_accuracy". The metric can be found at [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
+This is why, for the purpose of this project, a custom metric was developed, titled "custom_accuracy". The metric can be found at [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb) and it mesures the accuracy of a classifier, but it counts when a position xn is classified as n or x, for x=1,2,3,4 and n=x+1 as a hit. For example: when a player's position is 34 and the player is classified as 3 or 4 or vice versa, this is considered a good classification. 
 
