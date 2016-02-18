@@ -93,6 +93,17 @@ The folowing feature selection methods were utilized for each data set:
 * Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine the features with the highest score/relevance for predicting the specified label.
 * Variance Threshold - Removes all features that don't meet a specified threshold.
 
+# Technical Details
+
+This project was implemented using [Python 2.7](https://www.python.org/) and the following third party libraries:
+
+*[BeautifulSoup]
+*[Sckit-Learn]
+*[Pandas]
+*[Numpy]
+*[SciPy]
+*[iPtyhon Notebook]
+
 # Classification Results
 
 ## Classifying 3 positions - Data Set 1 
