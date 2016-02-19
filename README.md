@@ -126,11 +126,14 @@ Using variance threshold 3 features were removed:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.68 | 0.53 | 0.858
-Domain Knowledge | 0.79 | 0.893 | 0.877
-Univariate | 0.73 | 0.893 | 0.85
+None | 0.735 | 0.893 | 0.849
+Domain Knowledge | 0.893 | 0.58 | 0.877
+Univariate | 0.786 | 0.901 | 0.857
+Variance Threshold | 1.0 | 1.0 | 1.0
 
-Confusion Matrices in the source file.
+Confusion Matrices verticaly ordered in the same as the table above:
+
+![alt text](http://snag.gy/R6Udg.jpg)
 
 ## Classifying 5 positions - Data Set 2 
 The code can be found in [Classification_5_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_5_positions.ipynb)
@@ -151,11 +154,14 @@ Using variance threshold 3 features were removed:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.56 | 0.71 | 0.74
-Domain Knowledge | 0.66 | 0.75 | 0.79
-Univariate | 1.0 | 1.0 | 0.87
+None | 0.661 | 0.711 | 0.570
+Domain Knowledge | 0.725 | 0.753 | 0.669
+Univariate | 0.683 | 0.725 | 0.598
+Variance Threshold | 1.0 |  0.992 |  0.802
 
-Confusion Matrices in the soure file.
+Confusion Matrices verticaly ordered in the same as the table above:
+
+![alt text](http://snag.gy/MmDIb.jpg)
 
 ## Classifying 9 positions - Data Set 3 
 The code can be found in [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb)
@@ -176,12 +182,14 @@ Using variance threshold 4 features were removed:
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.735 | 0.893 | 0.849
-Domain Knowledge | 0.893 | 0.58 | 0.877
-Univariate | 0.786 | 0.901 | 0.857
-Variance Threshold | 1.0 | 1.0 | 1.0
+None | 0.527 | 0.618 | 0.548
+Domain Knowledge | 0.583 | 0.583 | 0.555
+Univariate | 0.381 | 0.405 | 0.409
+Variance Threshold | 0.576 | 0.618 |0 .559
 
-Confusion Matrices in the soure file.
+Confusion Matrices verticaly ordered in the same as the table above:
+
+![alt text](http://snag.gy/uoxtJ.jpg)
 
 #Conclusion 
 
