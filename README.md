@@ -131,7 +131,7 @@ Domain Knowledge | 0.893 | 0.58 | 0.877
 Univariate | 0.786 | 0.901 | 0.857
 Variance Threshold | 1.0 | 1.0 | 1.0
 
-Confusion Matrices verticaly ordered in the same as the table above:
+###Confusion Matrices verticaly ordered in the same as the table above:
 
 ![alt text](http://snag.gy/R6Udg.jpg)
 
@@ -159,7 +159,7 @@ Domain Knowledge | 0.725 | 0.753 | 0.669
 Univariate | 0.683 | 0.725 | 0.598
 Variance Threshold | 1.0 |  0.992 |  0.802
 
-Confusion Matrices verticaly ordered in the same as the table above:
+###Confusion Matrices verticaly ordered in the same as the table above:
 
 ![alt text](http://snag.gy/MmDIb.jpg)
 
@@ -187,7 +187,7 @@ Domain Knowledge | 0.583 | 0.583 | 0.555
 Univariate | 0.381 | 0.405 | 0.409
 Variance Threshold | 0.576 | 0.618 |0 .559
 
-Confusion Matrices verticaly ordered in the same as the table above:
+###Confusion Matrices verticaly ordered in the same as the table above:
 
 ![alt text](http://snag.gy/uoxtJ.jpg)
 
