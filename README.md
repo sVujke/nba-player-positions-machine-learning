@@ -197,19 +197,17 @@ Variance Threshold | 0.576 | 0.618 |0 .559
 
 The most accurate prediction of player position based on individual statistics can be made when classification is performed in 3 positions (3 classes)
 
-In the case of classifying players in three positions, feature selection using Variance Threshold method gave the best results for all three classifiers.
+In the case feature selection using the Variance Threshold method gave the best results for all three classifiers and it enabled Naive Bayes, SVM and Linear Regression to perform equaly good. 
 Univariate feature selection and Domain Knowledge methods also enabeled the classifiers to perform well. The worst performance was recorded for SVM when domain knowledge was used to remove features.  
-
-The classidiers performed worst when there were no features removed.
 
 
 ### 5 positions
 
 In this case classification was decent, but not as good as when classifying three positions. 
 
-Again, the best method for feature selection was Variance Threshold and the best performing classifier was Naive Bayes in that particular case. SVM was the most accurate classifier in other variations of feature selection. Logistic Regression performed the best.
+Again, the best method for feature selection was Variance Threshold and the best performing classifier was Naive Bayes in that particular case. SVM was the most accurate classifier in other variations of feature selection. Logistic Regression performed the worst.
 
-The classidiers performed worst when there were no features removed. 
+All three classidiers performed the worst when there were no features removed. 
 
 ### 9 positions 
 
