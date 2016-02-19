@@ -195,29 +195,31 @@ Variance Threshold | 0.576 | 0.618 |0 .559
 
 ### 3 positions
 
-In the case of classifying players in three positions, feature selection based on domain knowledge performed a little better than the Univariate feature selection. 
+The most accurate prediction of player position based on individual statistics can be made when classification is performed in 3 positions (3 classes)
 
-The best algorithm for the job in this case is SVM.
+In the case of classifying players in three positions, feature selection using Variance Threshold method gave the best results for all three classifiers.
+Univariate feature selection and Domain Knowledge methods also enabeled the classifiers to perform well. The worst performance was recorded for SVM when domain knowledge was used to remove features.  
 
-The results are not as good as when classifying in 5 positions because many center players were classified as forwards and vice versa. Also a fewer number of forward players were classified as guards and vice versa. This can be seen from the confusion matrices.  
+The classidiers performed worst when there were no features removed.
+
 
 ### 5 positions
 
-The most accurate prediction of player position based on individual statistics can be made when classification is performed in 5 positions (5 classes) which is probably why this is the most common way to name positions. 
+In this case classification was decent, but not as good as when classifying three positions. 
 
-Both Naive Bayes and SVM gave good results These algorithms do not tolerate redundant features, therefore removing such features increases their accuracy. On the orher hand, Logistic Regression does tolerate redundant features, they actually increase the algorithm's accuracy, but not for more than 2 - 2.5% in this case.
+Again, the best method for feature selection was Variance Threshold and the best performing classifier was Naive Bayes in that particular case. SVM was the most accurate classifier in other variations of feature selection. Logistic Regression performed the best.
 
-The best results were achieved when using Univariate Feature selection. 
+The classidiers performed worst when there were no features removed. 
 
 ### 9 positions 
 
-In this case Naive Bayes performed the best. Domain knoweledge was slightly better than Univariate feature selection.
+In this case SVM performed the best. Variance Threshold was the best feature selection method again followed by domain knowledge.
 
-In this case algorithms performed the worst. This can be explained by the fact that many players from the dataset who can play at two positions spend most of the time playing at one position. As a result, there is a lot of players who play at position 45 and were classified to position 5, or from position 34 classified to position 3 etc.
+In this classification algorithms performed the worst. This can be explained by the fact that many players from the dataset who can play at two positions spend most of the time playing at one position. As a result, there is a lot of players who play at position 45 and were classified to position 5, or from position 34 classified to position 3 etc.
 
-For instance, Pedja Stojakovic can be found in the dataset with a position 34 (scraped from the website) even though he plays position 3. Similarly, when using Naive Bayes, confusion matrix contains 22 players who play at position 12 (able to play both 1 and 2), but are classified to position 2. 
+For instance, Pedja Stojakovic can be found in the dataset with a position 34 (scraped from the website) even though he plays position 3. Similarly, when using Naive Bayes, confusion matrix contains 21 players who play at position 12 (able to play both 1 and 2), but are classified to position 2. 
 
-![alt text](http://snag.gy/lDQ0x.jpg)
+![alt text](http://snag.gy/R71nK.jpg)
 
 This is why, for the purpose of this project, a custom metric was developed, titled "custom_accuracy". The metric can be found at [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb) and it mesures the accuracy of a classifier, but it counts when a position xn is classified as n or x, for x=1,2,3,4 and n=x+1 as a hit. For example: when a player's position is 34 and the player is classified as 3 or 4 or vice versa, this is considered a good classification. 
 
