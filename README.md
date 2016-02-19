@@ -116,9 +116,11 @@ Using the domain knowledge, it has been decided to remove the following features
 
 According to the Univariate Feature Selection these features were the most important:
 
-![alt text](http://snag.gy/b9OI4.jpg)
+![alt text](http://snag.gy/HC7za.jpg)
 
-Using variance threshold 4 features were removed.
+Using variance threshold 3 features were removed:
+
+![alt text](http://snag.gy/pYsFS.jpg)
 
 ###Classification results (accuracy scores):
 
@@ -137,11 +139,13 @@ The code can be found in [Classification_5_positions.ipynb](https://github.com/s
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
-Using variance threshold 4 features were removed.
-
-![alt text](http://snag.gy/Ileu6.jpg)
-
 According to the Univariate Feature Selection these features were the most important:
+
+![alt text](http://snag.gy/4wjD6.jpg)
+
+Using variance threshold 3 features were removed:
+
+![alt text](http://snag.gy/OhP1Z.jpg)
 
 ###Classification results (accuracy scores):
 
@@ -160,20 +164,22 @@ The code can be found in [Classification_9_positions.ipynb](https://github.com/s
 
 Using the domain knowledge, it has been decided to remove the following features: GP, GS, MIN, FG%, 3P%, FT%, PTS, YR, POS, 3PM, FTM, FGM.
 
-Using variance threshold 4 features were removed.
-
-![alt text](http://snag.gy/u9t2m.jpg)
-
 According to the Univariate Feature Selection these features were the most important:
+
+![alt text](http://snag.gy/7e1N0.jpg)
+
+Using variance threshold 4 features were removed:
+
+![alt text](http://snag.gy/TyxX6.jpg)
 
 ###Classification results (accuracy scores):
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.49 | 0.43 | 0.48
-Domain Knowledge | 0.598 | 0.58 | 0.57
-Univariate | 0.53 | 0.53 | 0.55
-Variance Threshold | 0.51 | 0.47 |0.50
+None | 0.735 | 0.893 | 0.849
+Domain Knowledge | 0.893 | 0.58 | 0.877
+Univariate | 0.786 | 0.901 | 0.857
+Variance Threshold | 1.0 | 1.0 | 1.0
 
 Confusion Matrices in the soure file.
 
