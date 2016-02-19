@@ -85,10 +85,11 @@ In these folders following files can be found:
 For each dataset, feature "NAME" was removed because it is not relevant for this classification problem. Four different feature selection methods were used on each dataset, so actually, each out of three datasets have four variations.
 
 Feature selection methods:
-1) None - No feature selection was done (all features were used).
-2) Domain knowledge - Features are removed using experience, common sense and knowledge about the game. 
-3) Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine features with the highest score/relevance for predicting the specified label.
-4) Variance Threshold - Removes all features that don't meet a specified threshold.
+
+1. None - No feature selection was done (all features were used).
+2. Domain knowledge - Features are removed using experience, common sense and knowledge about the game. 
+3. Univariate Feature Selection - [Select Percentile](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile) - This helps determine features with the highest score/relevance for predicting the specified label.
+4. Variance Threshold - Removes all features that don't meet a specified threshold.
 
 # Technical Details
 
@@ -124,7 +125,9 @@ The code performing classification on each three datasets can respectively be fo
 
 4) Variance Threshold - 3 features were removed:
 
-![alt text](http://snag.gy/pYsFS.jpg)
+* FG%
+* 3P%
+* FT%
 
 ###Classification results (accuracy scores):
 
@@ -153,7 +156,9 @@ Variance Threshold | 1.0 | 1.0 | 1.0
 
 4) Variance Threshold - 3 features were removed:
 
-![alt text](http://snag.gy/OhP1Z.jpg)
+* FG%
+* 3P%
+* FT%
 
 ###Classification results (accuracy scores):
 
@@ -182,7 +187,10 @@ Variance Threshold | 1.0 |  0.992 |  0.802
 
 4) Variance Threshold - 4 features were removed:
 
-![alt text](http://snag.gy/TyxX6.jpg)
+ * FG% 
+ * 3P% 
+ * FT% 
+ * STL
 
 ###Classification results (accuracy scores):
 
