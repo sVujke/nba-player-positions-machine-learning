@@ -142,9 +142,6 @@ Domain Knowledge | 0.87 (+/- 0.07) | 0.91 (+/- 0.05) | 0.90 (+/- 0.06)
 Univariate | 0.89 (+/- 0.04) | 0.91 (+/- 0.04) | 0.89 (+/- 0.06)
 Variance Threshold | 0.82 (+/- 0.07) | 0.90 (+/- 0.04) | 0.90 (+/- 0.05)
 
-###Confusion Matrices ordered verticaly in the same way as the table above:
-
-![alt text](http://snag.gy/R6Udg.jpg)
 
 ## Dataset 2 - Five Positions Classification
 
@@ -177,9 +174,6 @@ Domain Knowledge | 0.74 (+/- 0.09) | 0.82 (+/- 0.09) | 0.72 (+/- 0.11)
 Univariate | 0.77 (+/- 0.11) | 0.81 (+/- 0.09) | 0.72 (+/- 0.08)
 Variance Threshold | 0.71 (+/- 0.11) |  0.82 (+/- 0.10)|  0.70 (+/- 0.12)
 
-###Confusion Matrices ordered verticaly in the same way as the table above:
-
-![alt text](http://snag.gy/MmDIb.jpg)
 
 ## Dataset 3 - Nine positions Classification
 
@@ -191,7 +185,11 @@ Variance Threshold | 0.71 (+/- 0.11) |  0.82 (+/- 0.10)|  0.70 (+/- 0.12)
 
 3) Univariate Feature Selection - following features were found to be the most important:
 
-![alt text](http://snag.gy/7e1N0.jpg)
+* 3PA
+* 3P%
+* AST
+* W
+* H
 
 4) Variance Threshold - 4 features were removed:
 
@@ -204,14 +202,11 @@ Variance Threshold | 0.71 (+/- 0.11) |  0.82 (+/- 0.10)|  0.70 (+/- 0.12)
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.527 | 0.618 | 0.548
-Domain Knowledge | 0.583 | 0.583 | 0.555
-Univariate | 0.381 | 0.405 | 0.409
-Variance Threshold | 0.576 | 0.618 |0 .559
+None | 0.50 (+/- 0.13) | 0.618 | 0.548
+Domain Knowledge | 0.54 (+/- 0.13) | 0.583 | 0.555
+Univariate | 0.54 (+/- 0.13) | 0.405 | 0.409
+Variance Threshold | 0.52 (+/- 0.12) | 0.618 |0 .559
 
-###Confusion Matrices ordered verticaly in the same way as the table above:
-
-![alt text](http://snag.gy/uoxtJ.jpg)
 
 #Conclusion 
 
