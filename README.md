@@ -121,7 +121,11 @@ The code performing classification on each three datasets can respectively be fo
 
 3) Univariate Feature Selection - following features were found to be the most important:
 
-![alt text](http://snag.gy/HC7za.jpg)
+* OFF
+* AST
+* BLK
+* W
+* H
 
 4) Variance Threshold - 3 features were removed:
 
@@ -133,10 +137,10 @@ The code performing classification on each three datasets can respectively be fo
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.735 | 0.893 | 0.849
-Domain Knowledge | 0.893 | 0.58 | 0.877
-Univariate | 0.786 | 0.901 | 0.857
-Variance Threshold | 1.0 | 1.0 | 1.0
+None | 0.81 (+/- 0.08) | 0.90 (+/- 0.04) | 0.89 (+/- 0.06)
+Domain Knowledge | 0.87 (+/- 0.07) | 0.91 (+/- 0.05) | 0.90 (+/- 0.06)
+Univariate | 0.89 (+/- 0.04) | 0.91 (+/- 0.04) | 0.89 (+/- 0.06)
+Variance Threshold | 0.82 (+/- 0.07) | 0.90 (+/- 0.04) | 0.90 (+/- 0.05)
 
 ###Confusion Matrices ordered verticaly in the same way as the table above:
 
