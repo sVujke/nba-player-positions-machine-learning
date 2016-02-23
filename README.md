@@ -156,7 +156,11 @@ Variance Threshold | 0.82 (+/- 0.07) | 0.90 (+/- 0.04) | 0.90 (+/- 0.05)
 
 3) Univariate Feature Selection - following features were found to be the most important:
 
-![alt text](http://snag.gy/4wjD6.jpg)
+* OFF
+* AST
+* BLK
+* W
+* H
 
 4) Variance Threshold - 3 features were removed:
 
@@ -168,10 +172,10 @@ Variance Threshold | 0.82 (+/- 0.07) | 0.90 (+/- 0.04) | 0.90 (+/- 0.05)
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.661 | 0.711 | 0.570
-Domain Knowledge | 0.725 | 0.753 | 0.669
-Univariate | 0.683 | 0.725 | 0.598
-Variance Threshold | 1.0 |  0.992 |  0.802
+None | 0.70 (+/- 0.15) | 0.82 (+/- 0.12) | 0.69 (+/- 0.15)
+Domain Knowledge | 0.74 (+/- 0.09) | 0.82 (+/- 0.09) | 0.72 (+/- 0.11)
+Univariate | 0.77 (+/- 0.11) | 0.81 (+/- 0.09) | 0.72 (+/- 0.08)
+Variance Threshold | 0.71 (+/- 0.11) |  0.82 (+/- 0.10)|  0.70 (+/- 0.12)
 
 ###Confusion Matrices ordered verticaly in the same way as the table above:
 
