@@ -105,6 +105,8 @@ The code performing classification on each three datasets can respectively be fo
 
 # Classification Results
 
+Cross-validation was used in order to assess the accuracy of the models.
+
 ## Dataset 1 - Three Positions Classification 
 
 ###Feature selection
