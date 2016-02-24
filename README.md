@@ -70,15 +70,9 @@ H| Height | NAME | Name
 > Features refference http://basketball.realgm.com/info/glossary
 
 The data is split into three datasets:
-* [Dataset 1](https://github.com/sVujke/nba-player-positions/tree/master/data3) - For 3 positions classification
-* [Dataset 2](https://github.com/sVujke/nba-player-positions/tree/master/data5) - For 5 positions classification
-* [Dataset 3](https://github.com/sVujke/nba-player-positions/tree/master/data) - For 9 positions classification
-
-In these folders following files can be found:
-* cleaned 
-* train_data - For training the Classifier - contains 60% of the data
-* test_data - For tuning the classifiers and testing their performance - contains 20% of the data
-* valid_data - For final testing in order to avoid overfit - contains 20% of the data
+* [Dataset 1](https://github.com/sVujke/nba-player-positions/tree/master/datset1) - For 3 positions classification
+* [Dataset 2](https://github.com/sVujke/nba-player-positions/tree/master/dataset2) - For 5 positions classification
+* [Dataset 3](https://github.com/sVujke/nba-player-positions/tree/master/dataset3) - For 9 positions classification
 
 #Feature Selection 
 
@@ -209,30 +203,27 @@ Variance Threshold | 0.52 (+/- 0.12) | 0.58 (+/- 0.10) | 0.54 (+/- 0.09)
 
 #Conclusion 
 
+For each of the three datasets SVM performed better than Naive Bayes and Logistic Regression.
+
 ### Dataset 1 - Three Positions Classification 
 
 The most accurate prediction of player position based on individual statistics can be made when classification is performed in three positions (3 classes)
 
-In the case feature selection using the Variance Threshold method gave the best results for all three classifiers and it enabled Naive Bayes, SVM and Linear Regression to perform equaly good. 
-Univariate feature selection and Domain Knowledge methods also enabeled the classifiers to perform well. The worst performance was recorded for SVM when domain knowledge was used to remove features.  
+In the case feature selection using the Univariate and Domain Knowledge methods gave the best results for all three classifiers. SVM performed the best, Logistic Regression was slightly behind with domain knowledge and Variance Threshold as feature selection methods. 
+The worst results for each classifier were made when no feature selection was utilized.
 
 
 ### Dataset 2 - Five Positions Classification
 
 Classification results are decent, but not as good as when classifying in three positions. 
 
-Again, the best method for feature selection was Variance Threshold and the best performing classifier was Naive Bayes in that particular case. SVM was the most accurate classifier in other variations of feature selection. Logistic Regression performed the worst.
-
-All three classifiers performed the worst when there were no features removed. 
+In this case Naive Bayes performed the best when Univariate feature selection was utilized, on the other hand SVM performed the best when the other three methods were used. Logistic Regression gave the best results when Domain knowledge and Univariate feature selection were applied.
 
 ### Dataset 3 - Nine positions Classification
 
-In this case SVM performed the best. Variance Threshold was the best feature selection method, followed by the domain knowledge feature selection method.
+In this case when Domain knowledge was applied as a feature selection method the classifiers performed the best. 
 
-Algorithms performed the worst on this dataset. This can be explained by the fact that many players from the dataset who can play at two positions spend most of the time playing at one position. As a result, there is a lot of players who play at position 45 and were classified to position 5, or from position 34 classified to position 3 etc.
+Algorithms performed the worst on this dataset. This can be explained by the fact that many players from the dataset who can play at two positions spend most of the time playing at one particular position. As a result, there is a lot of players who play at position 45 and were classified to position 5, or from position 34 classified to position 3 etc.
 
 For instance, Pedja Stojakovic can be found in the dataset with a position 34 (scraped from the website) even though he plays position 3. Similarly, when using Naive Bayes, confusion matrix contains 21 players who play at position 12 (able to play both 1 and 2), but are classified to position 2. 
 
-![alt text](http://snag.gy/R71nK.jpg)
-
-This is why, for the purpose of this project, a custom metric was developed, titled "custom_accuracy". The metric can be found at [Classification_9_positions.ipynb](https://github.com/sVujke/nba-player-positions/blob/master/Classification_9_positions.ipynb) and it mesures the accuracy of a classifier, but it counts when a position xn is classified as n or x, for x=1,2,3,4 and n=x+1 as a hit. For example: when a player's position is 34 and the player is classified as 3 or 4 or vice versa, this is considered a good classification. 
