@@ -191,21 +191,20 @@ Variance Threshold | 0.71 (+/- 0.11) |  0.82 (+/- 0.10)|  0.70 (+/- 0.12)
 * W
 * H
 
-4) Variance Threshold - 4 features were removed:
+4) Variance Threshold - 3 features were removed:
 
  * FG% 
  * 3P% 
  * FT% 
- * STL
 
 ###Classification results (accuracy scores):
 
 Feature Selection | Naive Bayes | SVM | Logistic Regression
 --- | --- | --- | ---
-None | 0.50 (+/- 0.13) | 0.618 | 0.548
-Domain Knowledge | 0.54 (+/- 0.13) | 0.583 | 0.555
-Univariate | 0.54 (+/- 0.13) | 0.405 | 0.409
-Variance Threshold | 0.52 (+/- 0.12) | 0.618 |0 .559
+None | 0.50 (+/- 0.13) | 0.57 (+/- 0.10) | 0.53 (+/- 0.10)
+Domain Knowledge | 0.54 (+/- 0.13) | 0.58 (+/- 0.10) | 0.54 (+/- 0.06)
+Univariate | 0.54 (+/- 0.13) | 0.56 (+/- 0.10) | 0.53 (+/- 0.07)
+Variance Threshold | 0.52 (+/- 0.12) | 0.58 (+/- 0.10) | 0.54 (+/- 0.09)
 
 
 #Conclusion 
