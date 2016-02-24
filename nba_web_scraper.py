@@ -4,8 +4,8 @@ import requests, time
 start = time.time()
 
 
-f = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/NBA_Stats.txt" ,"w")
-errorFile = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/Error.txt" ,"w")
+f = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/data_scrape/NBA_Stats.txt" ,"w")
+errorFile = open("C:/Users/vujke/Documents/GitHub/basketball-positions-machine-learning/data_scrape/Error.txt" ,"w")
 
 dict_pos = {'PG':'1','SG':'2','SF':'3','PF':'4','C':'5','G':'12','GF':'23','F':'34','FC':'45'}
 
