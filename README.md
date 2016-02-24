@@ -70,9 +70,9 @@ H| Height | NAME | Name
 > Features refference http://basketball.realgm.com/info/glossary
 
 The data is split into three datasets:
-* [Dataset 1](https://github.com/sVujke/nba-player-positions/tree/master/datset1) - For 3 positions classification
-* [Dataset 2](https://github.com/sVujke/nba-player-positions/tree/master/dataset2) - For 5 positions classification
-* [Dataset 3](https://github.com/sVujke/nba-player-positions/tree/master/dataset3) - For 9 positions classification
+* [Dataset 1](https://github.com/sVujke/nba-player-positions/tree/master/datset1) - For 3 positions classification (1268 instances)
+* [Dataset 2](https://github.com/sVujke/nba-player-positions/tree/master/dataset2) - For 5 positions classification (712 instances)
+* [Dataset 3](https://github.com/sVujke/nba-player-positions/tree/master/dataset3) - For 9 positions classification (1428 instances)
 
 #Feature Selection 
 
